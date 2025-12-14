@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 20 14% 4%;
+    --foreground: 36 33% 94%;
+    
+    --card: 20 14% 7%;
+    --card-foreground: 36 33% 94%;
+    
+    --popover: 20 14% 7%;
+    --popover-foreground: 36 33% 94%;
+    
+    --primary: 38 92% 50%;
+    --primary-foreground: 20 14% 4%;
+    
+    --secondary: 20 14% 14%;
+    --secondary-foreground: 36 33% 94%;
+    
+    --muted: 20 14% 14%;
+    --muted-foreground: 36 20% 60%;
+    
+    --accent: 38 92% 50%;
+    --accent-foreground: 20 14% 4%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 36 33% 94%;
+    
+    --border: 20 14% 18%;
+    --input: 20 14% 18%;
+    --ring: 38 92% 50%;
+    
+    --radius: 0.75rem;
+    
+    --gold: 38 92% 50%;
+    --gold-light: 38 92% 65%;
+    --gold-dark: 38 92% 35%;
+    --chocolate: 20 40% 20%;
+    --cream: 36 33% 94%;
+
+    --sidebar-background: 20 14% 7%;
+    --sidebar-foreground: 36 33% 94%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 20 14% 4%;
+    --sidebar-accent: 20 14% 14%;
+    --sidebar-accent-foreground: 36 33% 94%;
+    --sidebar-border: 20 14% 18%;
+    --sidebar-ring: 38 92% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased m-0;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(38 92% 50%), hsl(28 85% 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, hsl(38 92% 50%), hsl(28 85% 45%));
+  }
+  
+  .bg-gradient-dark {
+    background: linear-gradient(180deg, hsl(20 14% 7%), hsl(20 14% 4%));
+  }
+  
+  .shadow-gold {
+    box-shadow: 0 4px 20px -4px hsl(38 92% 50% / 0.3);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(20 14% 7%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(20 14% 25%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(38 92% 50%);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
